@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 
 const App = () => {
-  // Estados para almacenar los valores de los inputs
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // Función para manejar el login (aún sin conexión a ningún backend)
   const handleLogin = () => {
-    // Aquí podrías hacer una validación o llamada a una API
     console.log('Email:', email);
     console.log('Password:', password);
   };
@@ -21,15 +18,15 @@ const App = () => {
         style={styles.input}
         placeholder="Email"
         value={email}
-        onChangeText={(text) => setEmail(text)} // Actualiza el estado de email
+        onChangeText={(text) => setEmail(text)} 
       />
 
       <TextInput
         style={styles.input}
         placeholder="Password"
-        secureTextEntry // Hace que el input sea para contraseñas
+        secureTextEntry 
         value={password}
-        onChangeText={(text) => setPassword(text)} // Actualiza el estado de password
+        onChangeText={(text) => setPassword(text)} 
       />
 
       <Button title="Login" onPress={handleLogin} />
